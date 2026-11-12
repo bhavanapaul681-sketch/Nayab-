@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #230b25, #752c57, #d47b91);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.page {
+    min-height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 22px;
+    animation: fade 1s;
+}
+
+.page.active {
+    display: flex;
+}
+
+@keyframes fade {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+    font-size: 42px;
+    color: #ffe0ed;
+    text-shadow: 0 0 20px #ff8db7;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #ffd4e5;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.9;
+    max-width: 520px;
+    color: #fff0f5;
+}
+
+button {
+    margin-top: 30px;
+    padding: 13px 30px;
+    border: 1px solid white;
+    border-radius: 30px;
+    background: #ffb6cf;
+    color: #542039;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: white;
+}
+
+.heart {
+    font-size: 55px;
+    margin-bottom: 20px;
+    animation: beat 1s infinite alternate;
+}
+
+@keyframes beat {
+    to {transform: scale(1.2);}
+}
+
+.gift {
+    font-size: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.gift:hover {
+    transform: rotate(10deg) scale(1.15);
+}
+
+#surprise {
+    display: none;
+    margin-top: 25px;
+    animation: fade 1s;
+}
+
+.stars {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    font-size: 20px;
+    animation: float 4s infinite alternate;
+}
+
+@keyframes float {
+    to {transform: translateY(35px);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars">✨ 💗 ✨</div>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+
+<div class="heart">🎂</div>
+
+<h1>HAPPY BIRTHDAY!</h1>
+
+<p>A special day for a very special person. 💗</p>
+
+<p>Today is all about YOU!</p>
+
+<button onclick="nextPage(2)">Open
